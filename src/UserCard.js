@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 
-const CardExampleCard = ({ avatar, name, location, userName }) => (
+const CardExampleCard = ({ avatar, name, location, userName, bio }) => (
   
   <div className="card">
     <Card>
@@ -12,6 +12,7 @@ const CardExampleCard = ({ avatar, name, location, userName }) => (
         />
         <Card.Content>
             <Card.Header>{name}</Card.Header>
+            <Card.Header>{bio}</Card.Header>
         <Card.Meta>
             <span className="date">Located in {location}</span>
         </Card.Meta>

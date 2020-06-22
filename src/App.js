@@ -9,8 +9,10 @@ function App() {
   const [userName, setUserName] = useState('')
   const [avatar, setAvatar] = useState('')
   const [location, setLocation] = useState('')
+  const [bio, setBio] = useState('')
   const [userInput, setUserInput] = useState('')
 
+  // on the page load show my github card
   useEffect(() => {
     fetch('https://api.github.com/users/alenaniku')
     .then(resp => resp.json())
@@ -20,11 +22,12 @@ function App() {
     })
   }, [])
 
-  const setData = ({ name, login, avatar_url, location }) => {
+  const setData = ({ name, login, avatar_url, location, bio }) => {
     setName(name)
     setUserName(login)
     setAvatar(avatar_url)
     setLocation(location)
+    setBio(bio)
   };
 
   // change the state on search
@@ -43,7 +46,7 @@ function App() {
 
   return (
     <>
-      <div className="navbar">Github User Finder</div>
+      <div className="navbar">Github User Search</div>
 
       <div className="search">
         <Form onSubmit={handleSubmitUser}>
@@ -51,12 +54,20 @@ function App() {
             <label>Enter User Name</label>
             <input placeholder="User Name" />
           </Form.Field>
-          
-          <Button type="submit">Search</Button>
+
+          <Button color="purple" type="submit">
+            Search
+          </Button>
         </Form>
       </div>
 
-      <UserCard avatar={avatar} name={name} location={location} userName={userName}/>
+      <UserCard
+        avatar={avatar}
+        name={name}
+        location={location}
+        userName={userName}
+        bio={bio}
+      />
     </>
   );
 }
