@@ -8,10 +8,11 @@ function App() {
   const [name, setName] = useState('')
   const [userName, setUserName] = useState('')
   const [avatar, setAvatar] = useState('')
+  const [location, setLocation] = useState('')
   const [userInput, setUserInput] = useState('')
 
   useEffect(() => {
-    fetch('https://api.github.com/users/example')
+    fetch('https://api.github.com/users/alenaniku')
     .then(resp => resp.json())
     .then(data => {
       console.log(data)
@@ -19,11 +20,12 @@ function App() {
     })
   }, [])
 
-  const setData = ({ name, login, avatar_url}) => {
+  const setData = ({ name, login, avatar_url, location }) => {
     setName(name)
     setUserName(login)
     setAvatar(avatar_url)
-  }
+    setLocation(location)
+  };
 
   // change the state on search
   const handleSearchUser = (e) => {
@@ -54,7 +56,7 @@ function App() {
         </Form>
       </div>
 
-      <UserCard avatar={avatar} name={name} userName={userName}/>
+      <UserCard avatar={avatar} name={name} location={location} userName={userName}/>
     </>
   );
 }
