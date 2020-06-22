@@ -12,6 +12,7 @@ function App() {
   const [location, setLocation] = useState('')
   const [bio, setBio] = useState('')
   const [userInput, setUserInput] = useState('')
+  const [repos, setRepos] = useState('')
   const [notFound, setNotFound] = useState(null)
 
   // on the page load show my github card - runs once
@@ -24,12 +25,13 @@ function App() {
     })
   }, [])
 
-  const setData = ({ name, login, avatar_url, location, bio }) => {
+  const setData = ({ name, login, avatar_url, location, bio, public_repos }) => {
     setName(name)
     setUserName(login)
     setAvatar(avatar_url)
     setLocation(location)
     setBio(bio)
+    setRepos(public_repos)
   };
 
   // change the state on search
@@ -76,6 +78,7 @@ function App() {
           location={location}
           userName={userName}
           bio={bio}
+          repos={repos}
         />
       )}
     </>

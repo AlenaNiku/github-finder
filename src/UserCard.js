@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 
-const CardExampleCard = ({ avatar, name, location, userName, bio }) => (
+const CardExampleCard = ({ avatar, name, location, userName, bio, repos }) => (
   <div className="card">
     <Card>
       <Image src={avatar} wrapped ui={false} />
@@ -15,7 +15,10 @@ const CardExampleCard = ({ avatar, name, location, userName, bio }) => (
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        <Card.Description>{userName}</Card.Description>
+        <Card.Description>Username - {userName}</Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <Card.Description>Public repos - {repos}</Card.Description>
       </Card.Content>
     </Card>
   </div>
