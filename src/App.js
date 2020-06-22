@@ -8,12 +8,13 @@ function App() {
   const [name, setName] = useState('')
   const [userName, setUserName] = useState('')
   const [avatar, setAvatar] = useState('')
-  // const [userInput, setUserInput] = useState('')
+  const [userInput, setUserInput] = useState('')
 
   useEffect(() => {
     fetch('https://api.github.com/users/example')
     .then(resp => resp.json())
     .then(data => {
+      console.log(data)
       setData(data)
     })
   }, [])
@@ -24,14 +25,27 @@ function App() {
     setAvatar(avatar_url)
   }
 
+  // change the state on search
+  const handleSearchUser = (e) => {
+    setUserInput([e.target.value])
+  }
+
+  // fetch the user on submit
+  const handleSubmitUser = () => {
+    fetch(`https://api.github.com/users/${userInput}`)
+    .then(resp => resp.json())
+    .then(userData => {
+      setData(userData)
+    })
+  }
 
   return (
     <>
       <div className="navbar">Github User Finder</div>
 
       <div className="search">
-        <Form>
-          <Form.Field>
+        <Form onSubmit={handleSubmitUser}>
+          <Form.Field onChange={handleSearchUser}>
             <label>Enter User Name</label>
             <input placeholder="User Name" />
           </Form.Field>
