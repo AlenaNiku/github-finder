@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import './App.css';
-import UserCard from './UserCard';
 import { Button, Form } from "semantic-ui-react";
+import UserCard from './UserCard';
+import NotAUser from './NotAUser'
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
   const [location, setLocation] = useState('')
   const [bio, setBio] = useState('')
   const [userInput, setUserInput] = useState('')
+  const [notFound, setNotFound] = useState(null)
 
-  // on the page load show my github card
+  // on the page load show my github card - runs once
   useEffect(() => {
     fetch('https://api.github.com/users/alenaniku')
     .then(resp => resp.json())
@@ -35,12 +37,16 @@ function App() {
     setUserInput([e.target.value])
   }
 
-  // fetch the user on submit
+  // fetch the user on submit, if the user is not found - display message
   const handleSubmitUser = () => {
     fetch(`https://api.github.com/users/${userInput}`)
     .then(resp => resp.json())
     .then(userData => {
-      setData(userData)
+      if (userData.message) {
+        setNotFound(userData.message)
+      } else {
+        setData(userData)
+      }
     })
   }
 
@@ -61,13 +67,17 @@ function App() {
         </Form>
       </div>
 
-      <UserCard
-        avatar={avatar}
-        name={name}
-        location={location}
-        userName={userName}
-        bio={bio}
-      />
+      {notFound ? (
+        <NotAUser />
+      ) : (
+        <UserCard
+          avatar={avatar}
+          name={name}
+          location={location}
+          userName={userName}
+          bio={bio}
+        />
+      )}
     </>
   );
 }

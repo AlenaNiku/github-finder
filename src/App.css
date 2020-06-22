@@ -19,4 +19,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.notfound {
+  display: flex;
+  justify-content: center;
+}
+
 
