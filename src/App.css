@@ -7,3 +7,14 @@
   padding: 20px;
   background-color: lightseagreen;
 }
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}

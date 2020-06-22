@@ -8,25 +8,39 @@ function App() {
   const [name, setName] = useState('')
   const [userName, setUserName] = useState('')
   const [avatar, setAvatar] = useState('')
-  const [userInput, setUserInpu] = useState('')
+  // const [userInput, setUserInput] = useState('')
+
+  useEffect(() => {
+    fetch('https://api.github.com/users/example')
+    .then(resp => resp.json())
+    .then(data => {
+      setData(data)
+    })
+  }, [])
+
+  const setData = ({ name, login, avatar_url}) => {
+    setName(name)
+    setUserName(login)
+    setAvatar(avatar_url)
+  }
 
 
   return (
     <>
-      <div className="navbar">Search Github User</div>
+      <div className="navbar">Github User Finder</div>
 
       <div className="search">
         <Form>
           <Form.Field>
-            <label>First Name</label>
-            <input placeholder="First Name" />
+            <label>Enter User Name</label>
+            <input placeholder="User Name" />
           </Form.Field>
           
           <Button type="submit">Search</Button>
         </Form>
       </div>
 
-      <UserCard />
+      <UserCard avatar={avatar} name={name} userName={userName}/>
     </>
   );
 }
