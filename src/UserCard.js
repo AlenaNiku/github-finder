@@ -7,7 +7,7 @@ const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog, u
         <Image src={avatar} wrapped ui={false} />
       <Card.Content>
         <a href={url} wrapped ui={false}>
-          <Card.Header>{name}</Card.Header>
+          <Card.Header style={{fontSize: "20px"}}>{name}</Card.Header>
         </a>
         <Card.Description>{bio}</Card.Description>
         <Card.Meta>
