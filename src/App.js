@@ -1,4 +1,4 @@
-import React, { useState, useEffect, setState} from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import { Button, Form } from "semantic-ui-react";
 import UserCard from './UserCard';
@@ -13,6 +13,7 @@ function App() {
   const [bio, setBio] = useState('')
   const [userInput, setUserInput] = useState('')
   const [repos, setRepos] = useState('')
+  const [blog, setBlog] = useState('')
   const [notFound, setNotFound] = useState(null)
 
   // on the page load show my github card - runs once
@@ -25,13 +26,14 @@ function App() {
     })
   }, [])
 
-  const setData = ({ name, login, avatar_url, location, bio, public_repos }) => {
+  const setData = ({ name, login, avatar_url, location, bio, public_repos, blog }) => {
     setName(name)
     setUserName(login)
     setAvatar(avatar_url)
     setLocation(location)
     setBio(bio)
     setRepos(public_repos)
+    setBlog(blog)
   };
 
   // change the state on search
@@ -83,6 +85,7 @@ function App() {
           userName={userName}
           bio={bio}
           repos={repos}
+          blog={blog}
         />
       )}
     </>
