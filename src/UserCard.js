@@ -1,13 +1,15 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 
-const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog }) => (
+const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog, url }) => (
   <div className="card">
     <Card>
-      <Image src={avatar} wrapped ui={false} />
+        <Image src={avatar} wrapped ui={false} />
       <Card.Content>
-        <Card.Header>{name}</Card.Header>
-        <Card.Header>{bio}</Card.Header>
+        <a href={url} wrapped ui={false}>
+          <Card.Header>{name}</Card.Header>
+        </a>
+        <Card.Description>{bio}</Card.Description>
         <Card.Meta>
           <span className="date" i class="fa fa-map-marker">
             {location}
