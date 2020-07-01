@@ -39,7 +39,7 @@ function App() {
     setUserInput([e.target.value])
   }
 
-  // fetch the user on submit, if the user is not found - display message
+  // fetch the user on submit, if the user is not found - display message. Reset the setNotFound state to clear the state and be able to go back to the search
   const handleSubmitUser = () => {
     fetch(`https://api.github.com/users/${userInput}`)
     .then(resp => resp.json())
@@ -59,14 +59,15 @@ function App() {
 
       <div className="search">
         <Form onSubmit={handleSubmitUser}>
-          <Form.Field onChange={handleSearchUser}>
-            <label>Enter User Name</label>
-            <input placeholder="User Name" />
-          </Form.Field>
+          <Form.Group>
+          <Form.Input onChange={handleSearchUser}>
+            <input placeholder="Enter User Name" />
+          </Form.Input>
 
           <Button color="purple" type="submit">
             Search
           </Button>
+          </Form.Group>
         </Form>
       </div>
 
