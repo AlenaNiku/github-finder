@@ -3,12 +3,10 @@ import { Card, Image } from "semantic-ui-react";
 
 const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog, url }) => (
   <div className="card">
-    <Card>
+    <Card  href={url} wrapped ui={false}>
         <Image src={avatar} wrapped ui={false} />
       <Card.Content>
-        <a href={url} wrapped ui={false}>
           <Card.Header style={{fontSize: "20px"}}>{name}</Card.Header>
-        </a>
         <Card.Description>{bio}</Card.Description>
         <Card.Meta>
           <span className="date" i class="fa fa-map-marker">
