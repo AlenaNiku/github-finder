@@ -1,8 +1,8 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, setState} from 'react';
 import './App.css';
 import { Button, Form } from "semantic-ui-react";
 import UserCard from './UserCard';
-import NotAUser from './NotAUser'
+import oops from "./oops.jpg";
 
 function App() {
 
@@ -70,7 +70,9 @@ function App() {
       </div>
 
       {notFound ? (
-        <NotAUser />
+        <div className="notfound">
+          <img src={oops} alt="not found page"></img>
+        </div>
       ) : (
         <UserCard
           avatar={avatar}

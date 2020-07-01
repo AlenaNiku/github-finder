@@ -1,4 +1,9 @@
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   padding: 40px;
   text-align: center;
