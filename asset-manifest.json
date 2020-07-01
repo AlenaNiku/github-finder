@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/github-finder/static/css/main.0beb008f.chunk.css",
-    "main.js": "/github-finder/static/js/main.0d509e96.chunk.js",
-    "main.js.map": "/github-finder/static/js/main.0d509e96.chunk.js.map",
+    "main.css": "/github-finder/static/css/main.79f2b244.chunk.css",
+    "main.js": "/github-finder/static/js/main.808c6aeb.chunk.js",
+    "main.js.map": "/github-finder/static/js/main.808c6aeb.chunk.js.map",
     "runtime-main.js": "/github-finder/static/js/runtime-main.c7dda347.js",
     "runtime-main.js.map": "/github-finder/static/js/runtime-main.c7dda347.js.map",
     "static/css/2.1a05da21.chunk.css": "/github-finder/static/css/2.1a05da21.chunk.css",
-    "static/js/2.1abfb591.chunk.js": "/github-finder/static/js/2.1abfb591.chunk.js",
-    "static/js/2.1abfb591.chunk.js.map": "/github-finder/static/js/2.1abfb591.chunk.js.map",
+    "static/js/2.c320bf5a.chunk.js": "/github-finder/static/js/2.c320bf5a.chunk.js",
+    "static/js/2.c320bf5a.chunk.js.map": "/github-finder/static/js/2.c320bf5a.chunk.js.map",
     "index.html": "/github-finder/index.html",
-    "precache-manifest.ef0f73b9503352a2947b14550a72f1fd.js": "/github-finder/precache-manifest.ef0f73b9503352a2947b14550a72f1fd.js",
+    "precache-manifest.92eb16fc1ffb12f86a7dd61e35b2eddb.js": "/github-finder/precache-manifest.92eb16fc1ffb12f86a7dd61e35b2eddb.js",
     "service-worker.js": "/github-finder/service-worker.js",
     "static/css/2.1a05da21.chunk.css.map": "/github-finder/static/css/2.1a05da21.chunk.css.map",
-    "static/css/main.0beb008f.chunk.css.map": "/github-finder/static/css/main.0beb008f.chunk.css.map",
-    "static/js/2.1abfb591.chunk.js.LICENSE.txt": "/github-finder/static/js/2.1abfb591.chunk.js.LICENSE.txt",
+    "static/css/main.79f2b244.chunk.css.map": "/github-finder/static/css/main.79f2b244.chunk.css.map",
+    "static/js/2.c320bf5a.chunk.js.LICENSE.txt": "/github-finder/static/js/2.c320bf5a.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/github-finder/static/media/outline-icons.ef60a4f6.woff",
     "static/media/oops.jpg": "/github-finder/static/media/oops.a43ee6d3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c7dda347.js",
     "static/css/2.1a05da21.chunk.css",
-    "static/js/2.1abfb591.chunk.js",
-    "static/css/main.0beb008f.chunk.css",
-    "static/js/main.0d509e96.chunk.js"
+    "static/js/2.c320bf5a.chunk.js",
+    "static/css/main.79f2b244.chunk.css",
+    "static/js/main.808c6aeb.chunk.js"
   ]
 }
