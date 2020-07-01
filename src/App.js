@@ -48,6 +48,7 @@ function App() {
         setNotFound(userData.message)
       } else {
         setData(userData)
+        setNotFound(null)
       }
     })
   }
