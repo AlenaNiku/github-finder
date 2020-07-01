@@ -3,7 +3,7 @@ import { Card, Image } from "semantic-ui-react";
 
 const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog, url }) => (
   <div className="card">
-    <Card  href={url} wrapped ui={false}>
+    <Card href={url} target="_blank" wrapped ui={false}>
         <Image src={avatar} wrapped ui={false} />
       <Card.Content>
           <Card.Header style={{fontSize: "20px"}}>{name}</Card.Header>
