@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  padding: 40px;
+  padding: 40px 0 0;
   text-align: center;
   font-family: 'Bungee Shade', cursive;
   font-size: 50px;  
@@ -34,4 +34,21 @@ img {
   width: 400px;
 }
 
+/* MEDIA QUERIES */
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 70px */
+@media screen and (min-width: 601px) {
+  div.navbar {
+    font-size: 70px;
+    line-height: 1;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 40px */
+@media screen and (max-width: 600px) {
+  div.navbar {
+    font-size: 40px;
+    line-height: 1;
+  }
+}
 
