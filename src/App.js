@@ -14,7 +14,8 @@ function App() {
   const [userInput, setUserInput] = useState('')
   const [repos, setRepos] = useState('')
   const [blog, setBlog] = useState('')
-  const [html_url, setUrl] = useState('')
+  const [followers, setFollowers] = useState('')
+  const [html_url, setUrl] = useState('') 
   const [notFound, setNotFound] = useState(null)
 
   // on the page load show my github card - runs once
@@ -27,7 +28,7 @@ function App() {
     })
   }, [])
 
-  const setData = ({ name, login, avatar_url, location, bio, public_repos, blog, html_url }) => {
+  const setData = ({ name, login, avatar_url, location, bio, public_repos, blog, html_url, followers }) => {
     setName(name)
     setUserName(login)
     setAvatar(avatar_url)
@@ -36,6 +37,7 @@ function App() {
     setRepos(public_repos)
     setBlog(blog)
     setUrl(html_url)
+    setFollowers(followers)
   };
 
   // change the state on search
@@ -60,14 +62,12 @@ function App() {
   return (
     <>
       <div className="navbar">Github User Search</div>
-
       <div className="search">
         <Form onSubmit={handleSubmitUser}>
           <Form.Group>
           <Form.Input onChange={handleSearchUser}>
             <input placeholder="Enter User Name" />
           </Form.Input>
-
           <Button color="purple" type="submit">
             Search
           </Button>
@@ -89,6 +89,7 @@ function App() {
           repos={repos}
           blog={blog}
           url={html_url}
+          followers={followers}
         />
       )}
     </>
