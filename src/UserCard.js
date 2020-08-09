@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 
-const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog, url, followers }) => (
+const UserCard = ({ avatar, name, location, userName, bio, repos, blog, url, followers }) => (
   <div className="card">
     <Card href={url} target="_blank" wrapped ui={false} >
         <Image src={avatar} wrapped ui={false} />
@@ -30,4 +30,4 @@ const CardExampleCard = ({ avatar, name, location, userName, bio, repos, blog, u
   </div>
 );
 
-export default CardExampleCard;
+export default UserCard;
