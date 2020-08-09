@@ -7,3 +7,18 @@ This Hackathon was organized by **Mintbean** - a software developer talent incub
 #### Check out my blog post 👉 &nbsp;  <a href="https://medium.com/@alenanikulina0/react-usercard-component-styled-with-semantic-ui-9eee1ed2fb90" target="_blank">React UserCard Component (styled with Semantic-UI)</a>
 
 #### Check it out live 👉 &nbsp; <a href="https://alenaniku.github.io/github-finder/" target="_blank">Github User Finder</a>
+
+## Installation
+### Clone
+
+- Clone this repo to your local machine using `https://github.com/AlenaNiku/github-finder.git`
+
+### Setup
+
+> install npm packages and run development server
+
+- npm install && npm start
+
+> if you wish to use semantic UI React (recommend) for styling check out the documentation
+
+- `https://react.semantic-ui.com/`
